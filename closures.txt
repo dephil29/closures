@@ -19,6 +19,17 @@ var printHello = createFunctionPrinter('hello')
 printSample(); //should console.log('sample');
 printHello(); //should console.log('hello');
 
+function createFunctionPrinter() {
+  var printSample = "sample";
+  var printHello = "Hello";
+  function createdFunc() {
+    printHello;
+  }
+  return printHello;
+}
+
+createFunctionPrinter();
+
 Challenge 3
 /* function outer() {
   var counter = 0; // this variable is outside incrementCounter's scope
