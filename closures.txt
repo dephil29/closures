@@ -108,7 +108,7 @@ function after(num, callback) {
 }
 
 var hello = function() {console.log('finally')};
-var finallyWerks = after(17, hello);
+var finallyWerks = after(1700, hello);
 
 Extension: Challenge 7
 Write a function delay that accepts a callback as the first parameter and the wait in milliseconds before allowing the callback to be
