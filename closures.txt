@@ -20,16 +20,15 @@ var printHello = createFunctionPrinter('hello')
 printSample(); //should console.log('sample');
 printHello(); //should console.log('hello');
 
-function createFunctionPrinter() {
-  var printSample = "sample";
-  var printHello = "Hello";
-  function createdFunc() {
-    printHello;
-  }
-  return printHello;
+function createFunctionPrinter(str) {
+	function result() {
+		console.log(str);
+	}
+	return result;
 }
 
-createFunctionPrinter();
+var printSample = createFunctionPrinter('sample');
+printSample();
 
 Challenge 3
 /* function outer() {
@@ -50,6 +49,14 @@ Uncomment those lines of code. Try to deduce the output before executing.
 
 Challenge 4
 Now we are going to create a function addByX that returns a function that will add an input by x.
+
+function addByX(x) {
+	return function jibildy(num) {
+		return x + num;
+	}
+	return jibildy;
+}
+
 var addByTwo = addByX(2);
 addByTwo(1); //should return 3
 addByTwo(2); //should return 4
