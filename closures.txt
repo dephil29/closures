@@ -31,14 +31,14 @@ var printSample = createFunctionPrinter('sample');
 printSample();
 
 Challenge 3
-/* function outer() {
+function outer() {
   var counter = 0; // this variable is outside incrementCounter's scope
   function incrementCounter () {
     counter ++;
     console.log('counter', counter);
   }
   return incrementCounter;
-} */
+} 
 
 var willCounter = outer();
 var jasCounter = outer();
@@ -56,6 +56,14 @@ function addByX(x) {
 	}
 	return jibildy;
 }
+
+var addByTwo = addByX(2);
+var result = addByTwo(1);
+console.log(result);
+
+var addByThree = addByX(3);
+var result = addByThree(1);
+console.log(result);
 
 var addByTwo = addByX(2);
 addByTwo(1); //should return 3
